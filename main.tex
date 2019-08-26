@@ -152,4 +152,40 @@ Step-by-step, this job would likely involve:
 \item Deciding if the process needs to be repeated because the research aim is not met
 \end{enumerate}
 
+\section*{Elaboration}
+
+There are a range of technologies that could help deliver the step-by-step requirements listed in my algorithm.
+
+\subsection*{Requirements}
+
+Of the steps outlined, the following steps could be improved with tools:
+\begin{itemize}
+\item Using the tool to interact with sources and databases
+\item Saving sources
+\item Producing metadata
+\item organising saved sources.
+\end{itemize}\par
+
+The requirement for the first step are tools that can conduct a search for different keywords in documents as the term "re-nationalisation" is not always used. The sources are most likely to primarily be newspaper articles.\par
+Other requirements are that the tool has exportable metadata that includes keywords used and where the data is from, and can save the sources using a defined naming structure.
+\par
+
+\subsection*{Delivery}
+
+These requirements can be met by building a pipeline to capture newspaper articles about examples of re-nationalisation in Australia from online archives.\par
+
+The use of Application Programming Interfaces to conduct searches may be the best way to deliver that requirement. An API that could conduct searches on Trove and ProQuest Australia and New Zealand Newsstream, narrowed to specific keywords in text and Australian newspaper sources.\par
+
+It is likely to require writing some custom script to use the APIs to capture sources, export them and associated metadata.\par 
+
+\subsection*{Mitigating risks}
+
+There are risks, for example, it is not immediately clear that some resources can use APIs such as Google Scholar. Identifying what resources have APIs that may be useful should be done first to know how much work must be done.\par
+
+I might not be able to write the custom script in time needed to use the API and different scripts may be needed for different APIs. It is likely that others have tried similar searches so it would be prudent to search from existing codes if it exists online. There are existing programs using APIs for these databases such as \begin{verbatim}https://troveconsole.herokuapp.com/#newspapers\end{verbatim} which could also act as an alternative tool.\par
+
+For some sites such as Trove, if I still am having problems, I could use try alternatives such as with an Excel spreadsheet as shown at \begin{verbatim} https://stumblingfuture.wordpress.com/2014/03/13/using-the-trove-api-with-excel-spreadsheets/ \end{verbatim}if there are problems.\par
+
+There may not be an easy method of automating the exporting of metadata and a naming structure for saved sources using those APIs or in an organised or useful manner. It should be tested first and tweaked to avoid generating metadata and files which then need to be organised.\par
+
 \end{document}
