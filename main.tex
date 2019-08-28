@@ -1,7 +1,9 @@
 
 
 \documentclass{article}
-
+ 
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
 \title{Proof of Concept Scoping Exercise}
 \author{Osmond Chiu}
 
@@ -174,18 +176,19 @@ Other requirements are that the tool has exportable metadata that includes keywo
 
 These requirements can be met by building a pipeline to capture newspaper articles about examples of re-nationalisation in Australia from online archives.\par
 
-The use of Application Programming Interfaces to conduct searches may be the best way to deliver that requirement. An API that could conduct searches on Trove and ProQuest Australia and New Zealand Newsstream, narrowed to specific keywords in text and Australian newspaper sources.\par
-
-It is likely to require writing some custom script to use the APIs to capture sources, export them and associated metadata.\par 
+The use of Application Programming Interfaces to conduct searches may be the best way to deliver that requirement. An API that could conduct searches on Trove, Factiva and ProQuest Australia and New Zealand Newsstream, narrowed to specific keywords in text and Australian newspaper sources.\par
+It may require writing some custom script to use the APIs to capture sources, export them and associated metadata.\par 
+There are some existing tools that can be used, for example, a Trove API console available at \begin{verbatim}https://troveconsole.herokuapp.com/\end{verbatim} There is also a script for a Trove Newspaper Harvest using Python exists at \begin{verbatim} http://timsherratt.org/digital-heritage-handbook/docs/trove-newspaper-harvester/\end{verbatim}
 
 \subsection*{Mitigating risks}
 
 There are risks, for example, it is not immediately clear that some resources can use APIs such as Google Scholar. Identifying what resources have APIs that may be useful should be done first to know how much work must be done.\par
-
-I might not be able to write the custom script in time needed to use the API and different scripts may be needed for different APIs. It is likely that others have tried similar searches so it would be prudent to search from existing codes if it exists online. There are existing programs using APIs for these databases such as \begin{verbatim}https://troveconsole.herokuapp.com/#newspapers\end{verbatim} which could also act as an alternative tool.\par
-
-For some sites such as Trove, if I still am having problems, I could use try alternatives such as with an Excel spreadsheet as shown at \begin{verbatim} https://stumblingfuture.wordpress.com/2014/03/13/using-the-trove-api-with-excel-spreadsheets/ \end{verbatim}if there are problems.\par
+There may be other difficulties automating. Terms and Conditions of ProQuest and Factiva, which is what would be useful for more recent newspaper articles states that users shall not text mine or data mine. This information is at \begin{verbatim}https://libguides.mq.edu.au/textdatamining/publisher_resources\end{verbatim}
+I might not be able to write the custom script in time needed to use the API and different scripts may be needed for different APIs. It is likely that others have tried similar searches so it would be prudent to search from existing codes if it exists online.\par
+For some sites such as Trove, if I still am having problems, I could use try alternatives if there are problems such as with an Excel spreadsheet as shown at \begin{verbatim} https://stumblingfuture.wordpress.com/2014/03/13/using-the-trove-api-with-excel-spreadsheets/ \end{verbatim}\par
 
 There may not be an easy method of automating the exporting of metadata and a naming structure for saved sources using those APIs or in an organised or useful manner. It should be tested first and tweaked to avoid generating metadata and files which then need to be organised.\par
+
+Finally, the risk may be that the tool does not find much information meaning it may have been a waste of time.\par
 
 \end{document}
